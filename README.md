@@ -4,7 +4,7 @@ This is a simple inventory app using [Flask](http://flask.pocoo.org) and [SQLAlc
 
 ### Tools needed
 [PIP](https://pip.pypa.io/en/stable/installation/) |
-[Python](https://www.python.org/downloads/)
+[Python3](https://www.python.org/downloads/)
 
 ### Installing Dependencies
 
@@ -21,10 +21,6 @@ $ flask run
 or
 ```
 $ python3 app.py
-```
-or
-```
-$ python app.py
 ```
 
 Visit [http://localhost:5000/](http://localhost:5000/) in your browser to see the results.
