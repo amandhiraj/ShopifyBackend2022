@@ -98,7 +98,7 @@ def display_image():
 @app.route('/delete/<string:filename>', methods=['POST', 'GET'])
 def deleteImg(filename):
     #prevent random data being sent
-    if not allowed_file(filename) or check_file(filename):
+    if not allowed_file(filename) or not check_file(filename):
         return redirect("/display")
     #used the thumbnail path to delete the database entry's and both (thumbnail and image) local images store on the machine.
     pathToCheck = os.path.join(app.config['UPLOAD_FOLDER_THUMBNAIL'], filename)
@@ -121,9 +121,9 @@ def deleteImg(filename):
 @app.route('/update/<string:filenameToUpdate>', methods=['POST', 'GET'])
 def editImg(filenameToUpdate):
     #prevent random data being sent
-    if not allowed_file(filenameToUpdate) or check_file(filenameToUpdate):
+    if not allowed_file(filenameToUpdate) or not check_file(filenameToUpdate):
         return redirect("/display")
-        
+
     if request.method == 'GET':
         return render_template("update.html")
     if request.method == 'POST':
