@@ -2,6 +2,10 @@
 
 This is a simple inventory app using [Flask](http://flask.pocoo.org) and [SQLAlchemy](http://www.sqlalchemy.org/) library.
 
+### Tools needed
+[PIP](https://pip.pypa.io/en/stable/installation/) |
+[Python](https://www.python.org/downloads/)
+
 ### Installing Dependencies
 
 ```
