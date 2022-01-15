@@ -15,7 +15,14 @@ pip install -r requirements.txt
 ### Running the Application
 
 To run the app
-
+```
+$ flask run
+```
+or
+```
+$ python3 app.py
+```
+or
 ```
 $ python app.py
 ```
