@@ -28,7 +28,9 @@ ALLOWED_EXTENSIONS = set(['png', 'jpg', 'jpeg', 'gif'])
  
 def allowed_file(filename):
     return '.' in filename and filename.rsplit('.', 1)[1].lower() in ALLOWED_EXTENSIONS
-     
+
+def check_file(filename):
+    return True if filename.rsplit('.', 1)[1].lower() in ALLOWED_EXTENSIONS else False
 
 #mainpage
 @app.route('/')
@@ -95,7 +97,9 @@ def display_image():
 #delete's the image given the filename which is unique parameter
 @app.route('/delete/<string:filename>', methods=['POST', 'GET'])
 def deleteImg(filename):
-
+    #prevent random data being sent
+    if not allowed_file(filename) or check_file(filename):
+        return redirect("/display")
     #used the thumbnail path to delete the database entry's and both (thumbnail and image) local images store on the machine.
     pathToCheck = os.path.join(app.config['UPLOAD_FOLDER_THUMBNAIL'], filename)
     imagePath = ImageInv.query.filter_by(pathImageThumb=pathToCheck).first()
@@ -116,6 +120,10 @@ def deleteImg(filename):
 #updates the entry using the filename as the unique param.
 @app.route('/update/<string:filenameToUpdate>', methods=['POST', 'GET'])
 def editImg(filenameToUpdate):
+    #prevent random data being sent
+    if not allowed_file(filenameToUpdate) or check_file(filenameToUpdate):
+        return redirect("/display")
+        
     if request.method == 'GET':
         return render_template("update.html")
     if request.method == 'POST':
