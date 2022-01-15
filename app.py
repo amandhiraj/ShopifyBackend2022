@@ -37,6 +37,12 @@ def allowed_file(filename):
 def check_file(filename):
     return True if filename.rsplit('.', 1)[1].lower() in ALLOWED_EXTENSIONS else False
 
+#handle large file error
+@app.errorhandler(413)
+def largefile_error(e):
+    print("Large file")
+    return render_template("largefile.html")
+
 #mainpage
 @app.route('/')
 def home():

@@ -16,11 +16,15 @@ pip install -r requirements.txt
 
 To run the app
 ```
-$ flask run
+$ python app.py
 ```
-or
+if that does not work try,
 ```
 $ python3 app.py
+```
+if that does not work try,
+```
+$ flask run
 ```
 
 Visit [http://localhost:5000/](http://localhost:5000/) in your browser to see the results.
