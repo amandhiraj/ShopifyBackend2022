@@ -12,7 +12,7 @@ import uuid
 app = Flask(__name__)
  
 UPLOAD_FOLDER = 'static/uploads/'
-UPLOAD_FOLDER_THUMBNAIL = 'static/uploads/thumbnails'
+UPLOAD_FOLDER_THUMBNAIL = 'static/uploads/thumbnails/'
 
 app.secret_key = "secret key"
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
