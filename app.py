@@ -1,10 +1,12 @@
 #app.py
+from genericpath import exists
 from flask import Flask, flash, request, redirect, url_for, render_template
 import os
 from werkzeug.utils import secure_filename
 from PIL import Image as Thumb
 from models import ImageInv
 from db import db_init, db
+from pathlib import Path
 import uuid 
 
 app = Flask(__name__)
@@ -23,6 +25,9 @@ app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 #init the database
 db_init(app)
 
+#create folders requied if does not exists
+Path(app.config['UPLOAD_FOLDER']).mkdir(parents=True, exist_ok=True)
+Path(app.config['UPLOAD_FOLDER_THUMBNAIL']).mkdir(parents=True, exist_ok=True)
 #restrict images types
 ALLOWED_EXTENSIONS = set(['png', 'jpg', 'jpeg', 'gif'])
  
