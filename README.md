@@ -2,12 +2,16 @@
 
 This is a simple inventory app using [Flask](http://flask.pocoo.org) and [SQLAlchemy](http://www.sqlalchemy.org/) library.
 
-### Tools needed
-[PIP](https://pip.pypa.io/en/stable/installation/) |
-[Python3](https://www.python.org/downloads/)
+### Tools needed (Required)
+First Install (Py >= 3+), [Python3](https://www.python.org/downloads/)</br>
+Then follow the instructions and install [PIP](https://pip.pypa.io/en/stable/installation/) if you get an error saying you do not have  PIP installed.
 
+### Tools needed (Required)
+ 1.) Clone the repo or download as a zip.
+ 2.) cd into the root oif the folder
+ 3.) Install Dependencies
+ 
 ### Installing Dependencies
-
 ```
 pip install -r requirements.txt
 ```
