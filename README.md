@@ -8,7 +8,7 @@ Then follow the instructions and install [PIP](https://pip.pypa.io/en/stable/ins
 
 ### Tools needed (Required)
  1.) Clone the repo or download as a zip. </br>
- 2.) cd into the root oif the folder </br>
+ 2.) cd into the root of the folder </br>
  3.) Install Dependencies </br>
  
 ### Installing Dependencies
