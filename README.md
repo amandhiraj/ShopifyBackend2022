@@ -7,9 +7,9 @@ First Install (Py >= 3+), [Python3](https://www.python.org/downloads/)</br>
 Then follow the instructions and install [PIP](https://pip.pypa.io/en/stable/installation/) if you get an error saying you do not have  PIP installed.
 
 ### Tools needed (Required)
- 1.) Clone the repo or download as a zip.
- 2.) cd into the root oif the folder
- 3.) Install Dependencies
+ 1.) Clone the repo or download as a zip. </br>
+ 2.) cd into the root oif the folder </br>
+ 3.) Install Dependencies </br>
  
 ### Installing Dependencies
 ```
